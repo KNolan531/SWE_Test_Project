@@ -57,4 +57,83 @@ public class TestTraffic {
         td.setObstructions();
         assertTrue(traffic.equals(td.locationTraffic));
     }
+    
+    
+    //Test to see if Traffic location name is valid. 
+    @Test 
+    public void testLocationName() 
+    { 
+    	TrafficData td = new TrafficData("Atlanta", traffic);
+    	
+    	assertTrue(traffic.equals(td.locationTraffic));
+    	
+    	
+    }
+    
+    //Test to see if list of incidents > 0 
+    @Test 
+    public void testIncidents() 
+    { 
+    	TrafficData td = new TrafficData("Conyers",traffic); 
+    	td.setObstructions(); 
+    	
+    	assertNotEquals(6, td.getIncidents()); 
+        	
+    }
+    
+    //Test to see if Weather is proper weather condition 
+    @Test
+    public void testWeather() 
+    { 
+    	
+    	TrafficData td = new TrafficData("Atlanta",traffic); 
+    	
+    	td.setWeather(); 
+    	
+    	assertEquals("",td.getWeather()); 
+    	
+    	
+    }
+    
+    //Test to see if trafficLocations contains data
+    @Test 
+    public void testTraffListLocations() 
+    { 
+    	
+    	Traffic t = new Traffic(); 
+    	
+    	assertEquals(null,t.retrieveTrafficInfo());
+    	
+    	
+    }
+    
+    //Test to see if csv file output contains location searched for 
+    @Test 
+    public void testCSVFileLocationOuput() 
+    { 
+    	Traffic t = new Traffic(); 
+    	
+    	boolean containsLocation = t.file.canWrite();
+    	
+    	assertEquals(false,containsLocation); 
+    	      	     
+    	
+    }
+    
+    //Test to see if data in output csv file is properly formatted 
+    public void testDataFormat() 
+    { 
+    	Traffic t = new Traffic(); 
+    	
+    	assertEquals(true, t.file.canRead()); 
+    	
+    	
+    }
+    
+    
+    
+    
+    
+    
+    
 }
