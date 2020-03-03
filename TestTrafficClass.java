@@ -1,10 +1,11 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 import java.lang.*;
+import java.time.LocalDate;
 import java.util.List;
 
-/*  This test class will test out the Functionality test suites included in our Word Document 
- * 
+/*  This test class will test out the Functionality test suites included in our Word Document
+ *
  */
 
 public class TestTrafficClass
@@ -15,7 +16,7 @@ public class TestTrafficClass
     /*
         Start of R1 Functionality Test Cases
     */
-    
+
     //Test the connect() method of Traffic class
     @Test
     public void testConnect()
@@ -31,7 +32,7 @@ public class TestTrafficClass
     {
         Traffic t = new Traffic();
         t.connect();
-        boolean actual = t.fileExists("Atlanta");
+        boolean actual = t.fileExists();
         assertEquals(true, actual);
     }
 
@@ -45,7 +46,7 @@ public class TestTrafficClass
         boolean actual = t.fileExists();
         assertEquals(false, actual);
     }
-    
+
     //Test to see if File object is not Null
     @Test
     public void testFileIsNotNull()
@@ -69,8 +70,8 @@ public class TestTrafficClass
         test = t.retrieveTrafficInfo();
         assertTrue(test.equals(loc));
     }
-    
-    
+
+
 
     @Test
     public void testTrafficLocationsContainSearchedLocation() //This test to see if the correct location is returned when searched in the database
@@ -79,7 +80,7 @@ public class TestTrafficClass
         Traffic t = new Traffic();
         t.setLocation("Atlanta");
         t.connect();
-        t.retrieveTrafficInfo("Atlanta");
+        t.retrieveTrafficInfo();
         String loc = t.getLocation();
         assertEquals("Atlanta", loc);
     }
@@ -89,7 +90,7 @@ public class TestTrafficClass
 
         TrafficData t = new TrafficData();
         t.connect();
-        t.retrieveTrafficInfo("Atlanta");
+        t.retrieveTrafficInfo();
         int incidents = t.getIncidents();
         assertEquals(1, incidents);
 
@@ -102,7 +103,7 @@ public class TestTrafficClass
 
         Traffic t = new Traffic();
         t.connect();
-        t.retrieveTrafficInfo("Atlanta");
+        t.retrieveTrafficInfo();
         String locationName = t.getLocation();
         assertEquals("Atlanta", locationName);
 
@@ -113,7 +114,7 @@ public class TestTrafficClass
 
         TrafficData t = new TrafficData();
         t.connect();
-        t.retrieveTrafficInfo("Atlanta");
+        t.retrieveTrafficInfo();
         String Weather = t.getWeather();
         assertEquals("Sunny", Weather);
 
@@ -125,7 +126,7 @@ public class TestTrafficClass
 
         TrafficData t = new TrafficData();
         t.connect();
-        t.retrieveTrafficInfo("Atlanta");
+        t.retrieveTrafficInfo();
         LocalDate date = t.getDate();
         LocalDate expected = t.getDate();
         assertEquals(expected, date);
@@ -136,7 +137,7 @@ public class TestTrafficClass
     {
         TrafficData t = new TrafficData();
         t.connect();
-        t.retrieveTrafficInfo("Atlanta");
+        t.retrieveTrafficInfo();
         String FileName = t.file.getName();
         int length = FileName.length();
         int i = FileName.length()-1;
@@ -152,7 +153,7 @@ public class TestTrafficClass
     {
         TrafficData t = new TrafficData();
         t.connect();
-        t.retrieveTrafficInfo("Atlanta");
+        t.retrieveTrafficInfo();
         Long File = t.file.length();
         boolean Correct = false;
         if(File > 0 )
