@@ -10169,27 +10169,31 @@ h3 {
   }
 }
 .portfolio .portfolio-item {
-  cursor: pointer;
+  
   position: relative;
   display: block;
   max-width: 20rem;
   border-radius: 0.5rem;
   overflow: hidden;
 }
-.portfolio .portfolio-item .portfolio-item-caption {
+
+
+.portfolio .portfolio-item:hover .portfolio-item-caption {
   position: relative;
   top: 300px;
   left: 70px;
   background-color: #1abc9c;
-  transition: all 0.2s ease-in-out;
-  opacity: 0.9;
+  transition: all 0.7s ease-in-out; 
+  opacity: 1; 
   
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
+  
   opacity: 1;
 }
 .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
   font-size: 1.5rem;
+  height: 75px; 
 }
 
 .portfolio-modal .portfolio-modal-title {
