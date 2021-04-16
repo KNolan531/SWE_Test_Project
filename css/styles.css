@@ -4029,7 +4029,7 @@ input[type=button].btn-block {
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
-  align-items: left;
+  align-items: center;
 }
 
 .navbar-toggler {
@@ -4048,7 +4048,7 @@ input[type=button].btn-block {
   display: inline-block;
   width: 1.5em;
   height: 1.5em;
-  vertical-align: middle;
+  vertical-align: left;
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
