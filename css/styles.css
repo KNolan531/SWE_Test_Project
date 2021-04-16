@@ -492,7 +492,7 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
+  width: auto;
   height: auto;
 }
 
