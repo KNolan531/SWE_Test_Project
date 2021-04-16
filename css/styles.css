@@ -7525,6 +7525,11 @@ button.bg-dark:focus {
   margin-left: 0 !important;
 }
 
+.nleft {
+  float: left;
+  margin-left: 15px;
+}
+
 .m-1 {
   margin: 0.25rem !important;
 }
