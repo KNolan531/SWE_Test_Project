@@ -4028,7 +4028,7 @@ input[type=button].btn-block {
 
 .navbar-collapse {
   flex-basis: 100%;
-  flex-grow: 1;
+  flex-grow: 0.8;
   align-items: center;
 }
 
@@ -4039,13 +4039,14 @@ input[type=button].btn-block {
   background-color: transparent;
   border: 0.125rem solid transparent;
   border-radius: 0.5rem;
+  float: left; 
 }
 .navbar-toggler:hover, .navbar-toggler:focus {
   text-decoration: none;
 }
 
 .navbar-toggler-icon {
-  
+  float: left; 
   width: 1.5em;
   height: 1.5em;
   vertical-align: left;
