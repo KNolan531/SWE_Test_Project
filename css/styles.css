@@ -492,6 +492,11 @@ mark,
 }
 
 .img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-fluid2 {
   width: auto;
   height: auto;
 }
