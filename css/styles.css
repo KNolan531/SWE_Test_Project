@@ -4045,10 +4045,10 @@ input[type=button].btn-block {
 }
 
 .navbar-toggler-icon {
-  display: flex;
+  display: inline-block;
   width: 1.5em;
   height: 1.5em;
-  vertical-align: left;
+  vertical-align: middle;
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
