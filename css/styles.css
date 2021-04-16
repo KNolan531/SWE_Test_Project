@@ -568,6 +568,7 @@ pre code {
   padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
+  overflow:hidden; 
 }
 
 @media (min-width: 576px) {
@@ -3992,7 +3993,7 @@ input[type=button].btn-block {
   justify-content: space-between;
 }
 .navbar-brand {
-  display: inline-block;
+  display: block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
@@ -4028,7 +4029,7 @@ input[type=button].btn-block {
 
 .navbar-collapse {
   flex-basis: 100%;
-  flex-grow: 0.8;
+  flex-grow: 1;
   align-items: center;
 }
 
@@ -4039,17 +4040,16 @@ input[type=button].btn-block {
   background-color: transparent;
   border: 0.125rem solid transparent;
   border-radius: 0.5rem;
-  float: left; 
 }
 .navbar-toggler:hover, .navbar-toggler:focus {
   text-decoration: none;
 }
 
 .navbar-toggler-icon {
-  float: left; 
+  display: inline-block;
   width: 1.5em;
   height: 1.5em;
-  vertical-align: left;
+  vertical-align: middle;
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
@@ -4069,7 +4069,7 @@ input[type=button].btn-block {
 @media (min-width: 576px) {
   .navbar-expand-sm {
     flex-flow: row nowrap;
-    justify-content: left;
+    justify-content: flex-start;
   }
   .navbar-expand-sm .navbar-nav {
     flex-direction: row;
@@ -7524,11 +7524,6 @@ button.bg-dark:focus {
 .ml-0,
 .mx-0 {
   margin-left: 0 !important;
-}
-
-.nleft {
-  float: left;
-  margin-left: 15px;
 }
 
 .m-1 {
